@@ -36,3 +36,8 @@ Route::middleware('auth')->prefix('bookmarks')->as('bookmarks.')->group(function
     Route::post('{post}', 'BookmarkController@add')->name('add');
     Route::post('{post}/remove', 'BookmarkController@remove')->name('remove'); // ★ 追加
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+/*追加ルート */
